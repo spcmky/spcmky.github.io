@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>404 — Chris Edwards</title>
+  <meta name="robots" content="noindex">
+  <meta name="color-scheme" content="dark light">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b0d10'/%3E%3Ctext x='16' y='22' font-family='ui-monospace,monospace' font-size='16' font-weight='700' fill='%232dd4bf' text-anchor='middle'%3Ece%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <script>
+    (function () {
+      var stored = null;
+      try { stored = localStorage.getItem('theme'); } catch (e) {}
+      var system = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      document.documentElement.dataset.theme = stored || system;
+    })();
+  </script>
+  <style>
+    .notfound {
+      min-height: 100svh;
+      display: grid;
+      place-items: center;
+      text-align: center;
+    }
+    .notfound__code {
+      font-family: var(--font-mono);
+      font-size: var(--text-display);
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      color: var(--accent);
+      line-height: 1;
+    }
+    .notfound__title {
+      margin-top: var(--space-6);
+      font-size: var(--text-2xl);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    .notfound__lede {
+      max-width: 42ch;
+      margin: var(--space-4) auto var(--space-8);
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+  <main class="notfound">
+    <div class="shell">
+      <p class="notfound__code">404</p>
+      <h1 class="notfound__title">This page doesn't exist.</h1>
+      <p class="notfound__lede">
+        Either it moved, or it never did. Both are recoverable.
+      </p>
+      <a class="btn btn--primary" href="/">Back to the homepage</a>
+    </div>
+  </main>
+</body>
+</html>

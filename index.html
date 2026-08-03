@@ -1,75 +1,346 @@
 <!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Chris Edwards by spcmky</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/respond.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chris Edwards — Solutions Architect &amp; Platform Engineer</title>
 
-  </head>
-  <body>
-      <div id="header">
-        <nav>
-          <li class="fork"><a href="https://github.com/spcmky">View On GitHub</a></li>
-        </nav>
-      </div><!-- end header -->
+  <meta name="description" content="Chris Edwards — solutions architect and platform engineer. Twenty-five years building cloud infrastructure, developer platforms, and the systems that keep them running.">
+  <meta name="author" content="Chris Edwards">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#0b0d10" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#fbfbfa" media="(prefers-color-scheme: light)">
 
-    <div class="wrapper">
+  <link rel="canonical" href="https://www.spcmky.net/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.spcmky.net/">
+  <meta property="og:title" content="Chris Edwards — Solutions Architect &amp; Platform Engineer">
+  <meta property="og:description" content="Twenty-five years building cloud infrastructure, developer platforms, and the systems that keep them running.">
+  <meta name="twitter:card" content="summary">
 
-      <section>
-        <div id="title">
-          <h1>Chris Edwards</h1>
-          <p></p>
-          <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/spcmky">spcmky</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b0d10'/%3E%3Ctext x='16' y='22' font-family='ui-monospace,monospace' font-size='16' font-weight='700' fill='%232dd4bf' text-anchor='middle'%3Ece%3C/text%3E%3C/svg%3E">
+
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Chris Edwards",
+    "url": "https://www.spcmky.net/",
+    "jobTitle": "Solutions Architect & Platform Engineer",
+    "email": "mailto:spcmky@gmail.com",
+    "sameAs": [
+      "https://github.com/spcmky",
+      "https://www.linkedin.com/in/chrisedwards/"
+    ]
+  }
+  </script>
+
+  <script>
+    // Applied before first paint so the correct theme never flashes.
+    (function () {
+      var stored = null;
+      try { stored = localStorage.getItem('theme'); } catch (e) {}
+      var system = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      document.documentElement.dataset.theme = stored || system;
+    })();
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="shell site-header__inner">
+      <a class="wordmark" href="#top">
+        <span class="wordmark__mark" aria-hidden="true">ce</span>
+        <span class="wordmark__text">Chris Edwards</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#work">Work</a>
+        <a href="#focus">Focus</a>
+        <a href="#stack">Stack</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button class="theme-toggle" type="button" id="theme-toggle" aria-label="Switch to light theme">
+        <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/>
+        </svg>
+        <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="4.2"/>
+          <path d="M12 2v2.6M12 19.4V22M2 12h2.6M19.4 12H22M4.9 4.9l1.9 1.9M17.2 17.2l1.9 1.9M19.1 4.9l-1.9 1.9M6.8 17.2l-1.9 1.9"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero__backdrop" aria-hidden="true"></div>
+
+      <div class="shell hero__inner">
+        <p class="eyebrow reveal">Solutions Architect · Platform Engineer · DevSecOps</p>
+
+        <h1 class="hero__title reveal">
+          I build the platforms<br>other engineers build on.
+        </h1>
+
+        <p class="hero__lede reveal">
+          Twenty-five years of shipping software and the infrastructure under it — cloud
+          architecture, developer platforms, and CI/CD that people actually want to use.
+          I care about the paved road: the boring, well-lit path that makes the right
+          thing the easy thing.
+        </p>
+
+        <div class="hero__actions reveal">
+          <a class="btn btn--primary" href="mailto:spcmky@gmail.com">Get in touch</a>
+          <a class="btn btn--ghost" href="https://github.com/spcmky" rel="me noopener">
+            GitHub
+            <svg class="btn__arrow" viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M4.5 11.5 11.5 4.5M6 4.5h5.5V10"/>
+            </svg>
+          </a>
+          <a class="btn btn--ghost" href="https://www.linkedin.com/in/chrisedwards/" rel="me noopener">
+            LinkedIn
+            <svg class="btn__arrow" viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M4.5 11.5 11.5 4.5M6 4.5h5.5V10"/>
+            </svg>
+          </a>
         </div>
 
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+        <dl class="stats reveal">
+          <div class="stat">
+            <dt>Years shipping</dt>
+            <dd>25<span class="stat__unit">+</span></dd>
+          </div>
+          <div class="stat">
+            <dt>Primary domain</dt>
+            <dd class="stat--text">Cloud &amp; platform</dd>
+          </div>
+          <div class="stat">
+            <dt>Default posture</dt>
+            <dd class="stat--text">Automate it</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+    <section class="section" id="focus" aria-labelledby="focus-heading">
+      <div class="shell">
+        <header class="section__head reveal">
+          <p class="section__kicker">01 — Focus</p>
+          <h2 class="section__title" id="focus-heading">What I actually do</h2>
+          <p class="section__lede">
+            The work spans architecture through operations. These four areas are where
+            I spend most of my time.
+          </p>
+        </header>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+        <ul class="cards" role="list">
+          <li class="card reveal">
+            <span class="card__index" aria-hidden="true">01</span>
+            <h3 class="card__title">Cloud architecture</h3>
+            <p class="card__body">
+              Designing systems that survive contact with production — account and network
+              topology, multi-region and failover strategy, and honest cost modeling before
+              the bill teaches the lesson instead.
+            </p>
+          </li>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+          <li class="card reveal">
+            <span class="card__index" aria-hidden="true">02</span>
+            <h3 class="card__title">Platform engineering</h3>
+            <p class="card__body">
+              Golden paths, service templates, and self-service infrastructure. Treating
+              other engineers as the customer, and measuring the platform by how much
+              toil it removes rather than how much of it exists.
+            </p>
+          </li>
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+          <li class="card reveal">
+            <span class="card__index" aria-hidden="true">03</span>
+            <h3 class="card__title">CI/CD &amp; automation</h3>
+            <p class="card__body">
+              Pipelines that are fast, legible, and boring. Reproducible builds, progressive
+              delivery, GitOps, and infrastructure as code that a stranger can read on a
+              Tuesday afternoon and understand.
+            </p>
+          </li>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+          <li class="card reveal">
+            <span class="card__index" aria-hidden="true">04</span>
+            <h3 class="card__title">DevSecOps</h3>
+            <p class="card__body">
+              Security built into the pipeline rather than bolted on at review time —
+              secrets management, supply-chain integrity, hardened baselines, and gates
+              that block real risk without blocking real work.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+    <section class="section section--alt" id="work" aria-labelledby="work-heading">
+      <div class="shell">
+        <header class="section__head reveal">
+          <p class="section__kicker">02 — Work</p>
+          <h2 class="section__title" id="work-heading">Selected projects</h2>
+          <p class="section__lede">
+            Mostly things built to scratch an itch. Source for these and everything else
+            lives on <a href="https://github.com/spcmky" rel="me noopener">GitHub</a>.
+          </p>
+        </header>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+        <ul class="projects" role="list">
+          <li class="project reveal">
+            <a class="project__link" href="https://github.com/spcmky/code-monkey" rel="noopener">
+              <span class="project__lang" data-lang="TypeScript">TypeScript</span>
+              <h3 class="project__title">code-monkey</h3>
+              <p class="project__body">
+                Developer tooling experiments in TypeScript — the sandbox where ideas get
+                tried before they become something anyone depends on.
+              </p>
+              <span class="project__cta">View repository<svg class="btn__arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 11.5 11.5 4.5M6 4.5h5.5V10"/></svg></span>
+            </a>
+          </li>
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+          <li class="project reveal">
+            <a class="project__link" href="https://github.com/spcmky/ci-fast" rel="noopener">
+              <span class="project__lang" data-lang="Groovy">Groovy</span>
+              <h3 class="project__title">ci-fast</h3>
+              <p class="project__body">
+                Jenkins pipeline tooling in Groovy, aimed at the single most underrated
+                developer-experience metric: how long you wait for a build.
+              </p>
+              <span class="project__cta">View repository<svg class="btn__arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 11.5 11.5 4.5M6 4.5h5.5V10"/></svg></span>
+            </a>
+          </li>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+          <li class="project reveal">
+            <a class="project__link" href="https://github.com/spcmky/cat-feeder-5000" rel="noopener">
+              <span class="project__lang" data-lang="Python">Python</span>
+              <h3 class="project__title">cat-feeder-5000</h3>
+              <p class="project__body">
+                An automated pet feeder in Python. Physical hardware, real consequences,
+                and a very unforgiving set of end users.
+              </p>
+              <span class="project__cta">View repository<svg class="btn__arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 11.5 11.5 4.5M6 4.5h5.5V10"/></svg></span>
+            </a>
+          </li>
 
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+          <li class="project reveal">
+            <a class="project__link" href="https://github.com/spcmky/codex" rel="noopener">
+              <span class="project__lang" data-lang="Python">Python</span>
+              <h3 class="project__title">codex</h3>
+              <p class="project__body">
+                A Python project for collecting and working with structured reference
+                material — notes, indexes, and the tooling to keep them useful.
+              </p>
+              <span class="project__cta">View repository<svg class="btn__arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 11.5 11.5 4.5M6 4.5h5.5V10"/></svg></span>
+            </a>
+          </li>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
+          <li class="project reveal">
+            <a class="project__link" href="https://github.com/spcmky/cssr" rel="noopener">
+              <span class="project__lang" data-lang="HTML">HTML</span>
+              <h3 class="project__title">cssr</h3>
+              <p class="project__body">
+                An internal web app for recording student course scores — small, focused,
+                and built for the people who had to use it every day.
+              </p>
+              <span class="project__cta">View repository<svg class="btn__arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 11.5 11.5 4.5M6 4.5h5.5V10"/></svg></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
 
+    <section class="section" id="stack" aria-labelledby="stack-heading">
+      <div class="shell">
+        <header class="section__head reveal">
+          <p class="section__kicker">03 — Stack</p>
+          <h2 class="section__title" id="stack-heading">Tools of the trade</h2>
+          <p class="section__lede">
+            Opinions held loosely, but held. This is what I reach for by default.
+          </p>
+        </header>
+
+        <div class="stack">
+          <div class="stack__group reveal">
+            <h3 class="stack__label">Cloud &amp; infrastructure</h3>
+            <ul class="tags" role="list">
+              <li>AWS</li><li>OpenTofu</li><li>Terraform</li><li>Kubernetes</li>
+              <li>Helm</li><li>Docker</li><li>Ansible</li>
+            </ul>
+          </div>
+
+          <div class="stack__group reveal">
+            <h3 class="stack__label">Languages</h3>
+            <ul class="tags" role="list">
+              <li>Java</li><li>Node.js</li><li>TypeScript</li><li>Groovy</li>
+              <li>Bash</li><li>Python</li><li>SQL</li>
+            </ul>
+          </div>
+
+          <div class="stack__group reveal">
+            <h3 class="stack__label">Delivery</h3>
+            <ul class="tags" role="list">
+              <li>Jenkins</li><li>GitHub Actions</li><li>Argo CD</li>
+              <li>GitOps</li><li>Git</li>
+            </ul>
+          </div>
+
+          <div class="stack__group reveal">
+            <h3 class="stack__label">Operations</h3>
+            <ul class="tags" role="list">
+              <li>Prometheus</li><li>Grafana</li><li>OpenTelemetry</li>
+              <li>Datadog</li><li>SLOs</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--contact" id="contact" aria-labelledby="contact-heading">
+      <div class="shell">
+        <div class="contact reveal">
+          <p class="section__kicker">04 — Contact</p>
+          <h2 class="contact__title" id="contact-heading">Let's talk shop.</h2>
+          <p class="contact__lede">
+            Architecture reviews, platform work, or a thorny infrastructure problem that
+            has outlived its last three fixes — happy to hear about it.
+          </p>
+
+          <div class="contact__actions">
+            <a class="btn btn--primary" href="mailto:spcmky@gmail.com">spcmky@gmail.com</a>
+            <a class="btn btn--ghost" href="https://github.com/spcmky" rel="me noopener">
+              github.com/spcmky
+              <svg class="btn__arrow" viewBox="0 0 16 16" aria-hidden="true">
+                <path d="M4.5 11.5 11.5 4.5M6 4.5h5.5V10"/>
+              </svg>
+            </a>
+            <a class="btn btn--ghost" href="https://www.linkedin.com/in/chrisedwards/" rel="me noopener">
+              linkedin.com/in/chrisedwards
+              <svg class="btn__arrow" viewBox="0 0 16 16" aria-hidden="true">
+                <path d="M4.5 11.5 11.5 4.5M6 4.5h5.5V10"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell site-footer__inner">
+      <p>&copy; <span id="year">2026</span> Chris Edwards</p>
+      <p class="site-footer__meta">Built by hand. No frameworks, no trackers.</p>
     </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
-  </body>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
 </html>
