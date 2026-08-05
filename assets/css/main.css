@@ -544,6 +544,22 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 
 .project { display: flex; }
 
+/* Blank cells that square off a ragged last row. Hidden in one column, where a
+   short row cannot occur. Purely decorative — aria-hidden in the markup. */
+.project--ghost {
+  display: none;
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-lg);
+}
+
+@media (min-width: 40rem) {
+  .project--ghost:not(.project--ghost-3col) { display: block; }
+}
+
+@media (min-width: 60rem) {
+  .project--ghost { display: block; }
+}
+
 .project__link,
 .project__static {
   display: flex;

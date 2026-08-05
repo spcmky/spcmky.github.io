@@ -310,6 +310,11 @@
               <span class="project__cta">View repository<svg class="btn__arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 11.5 11.5 4.5M6 4.5h5.5V10"/></svg></span>
             </a>
           </li>
+
+          <!-- Empty cells that square off the last row. Seven projects leave one gap
+               at two columns and two at three, so the second only shows at three. -->
+          <li class="project project--ghost" aria-hidden="true"></li>
+          <li class="project project--ghost project--ghost-3col" aria-hidden="true"></li>
         </ul>
       </div>
     </section>
