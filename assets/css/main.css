@@ -472,15 +472,17 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 
 /* ---------- Focus cards ------------------------------------------------- */
 
-/* Four cards, so an explicit 2x2 — auto-fit would strand one on its own row. */
+/* Five cards, so explicit columns — auto-fit would strand one on its own row. */
 .cards {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-4);
 }
 
+/* Five cards into two columns: the lead one spans, the rest pair off below. */
 @media (min-width: 40rem) {
   .cards { grid-template-columns: repeat(2, 1fr); }
+  .cards > :first-child { grid-column: 1 / -1; }
 }
 
 .card {
@@ -531,19 +533,19 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   gap: var(--space-4);
 }
 
+/* Cards keep a uniform width at every count — a short last row just ends early. */
 @media (min-width: 40rem) {
   .projects { grid-template-columns: repeat(2, 1fr); }
 }
 
-/* Five projects into three columns: the lead one spans two, so both rows fill. */
 @media (min-width: 60rem) {
   .projects { grid-template-columns: repeat(3, 1fr); }
-  .projects > :first-child { grid-column: span 2; }
 }
 
 .project { display: flex; }
 
-.project__link {
+.project__link,
+.project__static {
   display: flex;
   flex-direction: column;
   gap: var(--space-3);
@@ -560,6 +562,22 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
   transform: translateY(-3px);
   box-shadow: var(--shadow-lift);
+}
+
+/* Client work with no public URL: same card, no affordance that implies a link.
+   Background stays --surface; --bg-elevated is darker than --surface in dark mode
+   and identical to it in light, so it would demote the card rather than lift it. */
+.project__static {
+  border-color: var(--border-strong);
+}
+
+/* Sits last because .project__body takes the free space, not because of a margin. */
+.project__note {
+  padding-top: var(--space-2);
+  color: var(--text-faint);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.03em;
 }
 
 .project__lang {
@@ -615,7 +633,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 
 /* ---------- Stack ------------------------------------------------------- */
 
-/* Four groups — explicit columns so the last one never strands on its own row. */
+/* Six groups — divides evenly into both column counts, so no spans are needed. */
 .stack {
   display: grid;
   grid-template-columns: 1fr;
@@ -627,7 +645,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 }
 
 @media (min-width: 60rem) {
-  .stack { grid-template-columns: repeat(4, 1fr); }
+  .stack { grid-template-columns: repeat(3, 1fr); }
 }
 
 .stack__label {

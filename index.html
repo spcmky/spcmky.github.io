@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Chris Edwards — Solutions Architect &amp; Platform Engineer</title>
 
-  <meta name="description" content="Chris Edwards — solutions architect and platform engineer. Twenty-five years building cloud infrastructure, developer platforms, and the systems that keep them running.">
+  <meta name="description" content="Chris Edwards — solutions architect and platform engineer. Twenty-five years building cloud infrastructure, developer platforms, AI agent systems, and the systems that keep them running.">
   <meta name="author" content="Chris Edwards">
   <meta name="color-scheme" content="dark light">
   <meta name="theme-color" content="#0b0d10" media="(prefers-color-scheme: dark)">
@@ -15,7 +15,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.spcmky.net/">
   <meta property="og:title" content="Chris Edwards — Solutions Architect &amp; Platform Engineer">
-  <meta property="og:description" content="Twenty-five years building cloud infrastructure, developer platforms, and the systems that keep them running.">
+  <meta property="og:description" content="Twenty-five years building cloud infrastructure, developer platforms, AI agent systems, and the systems that keep them running.">
   <meta name="twitter:card" content="summary">
 
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b0d10'/%3E%3Ctext x='16' y='22' font-family='ui-monospace,monospace' font-size='16' font-weight='700' fill='%232dd4bf' text-anchor='middle'%3Ece%3C/text%3E%3C/svg%3E">
@@ -92,7 +92,8 @@
           Twenty-five years of shipping software and the infrastructure under it — cloud
           architecture, developer platforms, and CI/CD that people actually want to use.
           I care about the paved road: the boring, well-lit path that makes the right
-          thing the easy thing.
+          thing the easy thing. Lately that road runs through AI — agents pointed at
+          operational work, held to the same bar as everything else I ship.
         </p>
 
         <div class="hero__actions reveal">
@@ -134,7 +135,7 @@
           <p class="section__kicker">01 — Focus</p>
           <h2 class="section__title" id="focus-heading">What I actually do</h2>
           <p class="section__lede">
-            The work spans architecture through operations. These four areas are where
+            The work spans architecture through operations. These five areas are where
             I spend most of my time.
           </p>
         </header>
@@ -142,6 +143,22 @@
         <ul class="cards" role="list">
           <li class="card reveal">
             <span class="card__index" aria-hidden="true">01</span>
+            <h3 class="card__title">AI &amp; agent systems</h3>
+            <p class="card__body">
+              Leading development of an AI-driven data platform, and building agents aimed
+              at operational work — triaging issues, investigating cluster problems,
+              answering questions against real documents. The interesting parts are the
+              unglamorous ones: routing cheap models at cheap tasks and expensive ones only
+              where they earn it, retrieval that grounds an answer in a citable source,
+              classifying every command an agent wants to run so the destructive ones need a
+              human, and evals so a prompt change can be measured instead of guessed at.
+              Non-determinism is a reliability problem, and in regulated environments it
+              gets treated like one.
+            </p>
+          </li>
+
+          <li class="card reveal">
+            <span class="card__index" aria-hidden="true">02</span>
             <h3 class="card__title">Cloud architecture</h3>
             <p class="card__body">
               Designing systems that survive contact with production — account and network
@@ -151,7 +168,7 @@
           </li>
 
           <li class="card reveal">
-            <span class="card__index" aria-hidden="true">02</span>
+            <span class="card__index" aria-hidden="true">03</span>
             <h3 class="card__title">Platform engineering</h3>
             <p class="card__body">
               Golden paths, service templates, and self-service infrastructure. Treating
@@ -161,7 +178,7 @@
           </li>
 
           <li class="card reveal">
-            <span class="card__index" aria-hidden="true">03</span>
+            <span class="card__index" aria-hidden="true">04</span>
             <h3 class="card__title">CI/CD &amp; automation</h3>
             <p class="card__body">
               Pipelines that are fast, legible, and boring. Reproducible builds, progressive
@@ -171,12 +188,16 @@
           </li>
 
           <li class="card reveal">
-            <span class="card__index" aria-hidden="true">04</span>
+            <span class="card__index" aria-hidden="true">05</span>
             <h3 class="card__title">DevSecOps</h3>
             <p class="card__body">
               Security built into the pipeline rather than bolted on at review time —
               secrets management, supply-chain integrity, hardened baselines, and gates
-              that block real risk without blocking real work.
+              that block real risk without blocking real work. Much of it in strict federal
+              environments — FedRAMP compliance, workloads in GovCloud, STIG-compliant
+              baselines. That work runs on different rules than commercial: the control set
+              is prescribed rather than chosen, and evidence has to be continuous instead of
+              assembled the week before an audit.
             </p>
           </li>
         </ul>
@@ -189,28 +210,61 @@
           <p class="section__kicker">02 — Work</p>
           <h2 class="section__title" id="work-heading">Selected projects</h2>
           <p class="section__lede">
-            Mostly things built to scratch an itch. Source for these and everything else
-            lives on <a href="https://github.com/spcmky" rel="me noopener">GitHub</a>.
+            Client work up front, then things built to scratch an itch. Source for the
+            open ones lives on <a href="https://github.com/spcmky" rel="me noopener">GitHub</a>.
           </p>
         </header>
 
         <ul class="projects" role="list">
           <li class="project reveal">
-            <a class="project__link" href="https://github.com/spcmky/code-monkey" rel="noopener">
-              <span class="project__lang" data-lang="TypeScript">TypeScript</span>
-              <h3 class="project__title">code-monkey</h3>
+            <div class="project__static">
+              <span class="project__lang" data-lang="Platform">Government platform</span>
+              <h3 class="project__title">GovOrch AI</h3>
               <p class="project__body">
-                Developer tooling experiments in TypeScript — the sandbox where ideas get
-                tried before they become something anyone depends on.
+                An AI-driven data orchestration platform for government — data catalog,
+                visual pipeline builder, and natural-language questions answered from the
+                data itself. I lead application development on my team and drive DevSecOps:
+                the delivery pipeline, the security gates, and the controls a federal
+                deployment has to satisfy.
+              </p>
+              <span class="project__note">Private — no public repository</span>
+            </div>
+          </li>
+
+          <li class="project reveal">
+            <a class="project__link" href="https://github.com/spcmky/shipwright" rel="noopener" aria-labelledby="proj-shipwright">
+              <span class="project__lang" data-lang="TypeScript">TypeScript</span>
+              <h3 class="project__title" id="proj-shipwright">shipwright</h3>
+              <p class="project__body">
+                A Kubernetes SRE agent that reasons about cluster problems with Claude on
+                Bedrock. Every command the model wants to run is classified first — read-only
+                runs, disruptive needs a human, destructive is refused — with unrecognized
+                commands denied rather than allowed. The classifier enforces it, not the
+                prompt, so a persuasive model can't talk its way past it.
               </p>
               <span class="project__cta">View repository<svg class="btn__arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 11.5 11.5 4.5M6 4.5h5.5V10"/></svg></span>
             </a>
           </li>
 
           <li class="project reveal">
-            <a class="project__link" href="https://github.com/spcmky/ci-fast" rel="noopener">
+            <a class="project__link" href="https://github.com/spcmky/code-monkey" rel="noopener" aria-labelledby="proj-code-monkey">
+              <span class="project__lang" data-lang="TypeScript">TypeScript</span>
+              <h3 class="project__title" id="proj-code-monkey">code-monkey</h3>
+              <p class="project__body">
+                A GitHub issue-triage agent on Bedrock, built around a separation I keep
+                coming back to: the model that writes is not the model that reviews, and a
+                controller sits above both. Haiku classifies, Sonnet drafts and critiques.
+                The orchestration, infrastructure, and schema are built; the autonomous
+                execution path is still being wired.
+              </p>
+              <span class="project__cta">View repository<svg class="btn__arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 11.5 11.5 4.5M6 4.5h5.5V10"/></svg></span>
+            </a>
+          </li>
+
+          <li class="project reveal">
+            <a class="project__link" href="https://github.com/spcmky/ci-fast" rel="noopener" aria-labelledby="proj-ci-fast">
               <span class="project__lang" data-lang="Groovy">Groovy</span>
-              <h3 class="project__title">ci-fast</h3>
+              <h3 class="project__title" id="proj-ci-fast">ci-fast</h3>
               <p class="project__body">
                 Jenkins pipeline tooling in Groovy, aimed at the single most underrated
                 developer-experience metric: how long you wait for a build.
@@ -220,9 +274,9 @@
           </li>
 
           <li class="project reveal">
-            <a class="project__link" href="https://github.com/spcmky/cat-feeder-5000" rel="noopener">
+            <a class="project__link" href="https://github.com/spcmky/cat-feeder-5000" rel="noopener" aria-labelledby="proj-cat-feeder-5000">
               <span class="project__lang" data-lang="Python">Python</span>
-              <h3 class="project__title">cat-feeder-5000</h3>
+              <h3 class="project__title" id="proj-cat-feeder-5000">cat-feeder-5000</h3>
               <p class="project__body">
                 An automated pet feeder in Python. Physical hardware, real consequences,
                 and a very unforgiving set of end users.
@@ -232,21 +286,23 @@
           </li>
 
           <li class="project reveal">
-            <a class="project__link" href="https://github.com/spcmky/codex" rel="noopener">
+            <a class="project__link" href="https://github.com/spcmky/codex" rel="noopener" aria-labelledby="proj-codex">
               <span class="project__lang" data-lang="Python">Python</span>
-              <h3 class="project__title">codex</h3>
+              <h3 class="project__title" id="proj-codex">codex</h3>
               <p class="project__body">
-                A Python project for collecting and working with structured reference
-                material — notes, indexes, and the tooling to keep them useful.
+                RAG document Q&amp;A — upload PDFs, ask questions, get answers streamed back
+                with citations to the source passage. Chroma for vectors, a chunking and
+                retrieval pipeline, and an eval harness that scores answer quality so
+                changes to the prompt can be measured instead of guessed at.
               </p>
               <span class="project__cta">View repository<svg class="btn__arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 11.5 11.5 4.5M6 4.5h5.5V10"/></svg></span>
             </a>
           </li>
 
           <li class="project reveal">
-            <a class="project__link" href="https://github.com/spcmky/cssr" rel="noopener">
+            <a class="project__link" href="https://github.com/spcmky/cssr" rel="noopener" aria-labelledby="proj-cssr">
               <span class="project__lang" data-lang="HTML">HTML</span>
-              <h3 class="project__title">cssr</h3>
+              <h3 class="project__title" id="proj-cssr">cssr</h3>
               <p class="project__body">
                 An internal web app for recording student course scores — small, focused,
                 and built for the people who had to use it every day.
@@ -298,6 +354,24 @@
             <ul class="tags" role="list">
               <li>Prometheus</li><li>Grafana</li><li>OpenTelemetry</li>
               <li>Datadog</li><li>SLOs</li>
+            </ul>
+          </div>
+
+          <div class="stack__group reveal">
+            <h3 class="stack__label">AI &amp; agents</h3>
+            <ul class="tags" role="list">
+              <li>Claude</li><li>AWS Bedrock</li><li>Agent orchestration</li>
+              <li>Model routing</li><li>RAG</li><li>Chroma</li><li>Embeddings</li>
+              <li>Evals</li>
+            </ul>
+          </div>
+
+          <div class="stack__group reveal">
+            <h3 class="stack__label">Security &amp; compliance</h3>
+            <ul class="tags" role="list">
+              <li>FedRAMP</li><li>AWS GovCloud</li><li>STIGs</li>
+              <li>Secrets management</li><li>SAST/DAST</li><li>SBOM</li>
+              <li>Supply-chain integrity</li><li>Hardened baselines</li>
             </ul>
           </div>
         </div>
