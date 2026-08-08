@@ -370,7 +370,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 }
 
 .hero__title {
-  max-width: 18ch;
+  max-width: 24ch;
   font-size: var(--text-display);
   font-weight: 700;
   line-height: 1.05;
