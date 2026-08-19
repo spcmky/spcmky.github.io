@@ -911,14 +911,3 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   }
 }
 
-/* Second beat of the headline — larger than the lede, quieter than the title,
-   so it reads as part of the statement rather than the start of the prose. */
-.hero__tagline {
-  margin-top: var(--space-4);
-  color: var(--text-muted);
-  font-size: var(--text-2xl);
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  line-height: 1.25;
-  text-wrap: balance;
-}
