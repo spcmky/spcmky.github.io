@@ -136,8 +136,8 @@
           <p class="section__kicker">01 — Focus</p>
           <h2 class="section__title" id="focus-heading">What I actually do</h2>
           <p class="section__lede">
-            The work spans architecture through operations. These five areas are where
-            I spend most of my time.
+            The work spans architecture through operations, and the breadth is the
+            point — the problems I get called for rarely stay inside one of these five.
           </p>
         </header>
 
@@ -233,6 +233,23 @@
           </li>
 
           <li class="project reveal">
+            <div class="project__static">
+              <span class="project__lang" data-lang="Rust">Rust</span>
+              <h3 class="project__title">greybeard</h3>
+              <p class="project__body">
+                An AI pull-request reviewer running in production against internal
+                repositories. Six specialist lenses review a change in parallel, every
+                candidate finding is adversarially verified before it can post, and the
+                survivors land as one comment that updates in place on re-review. Precision
+                is the whole design — benchmarked side by side against CodeRabbit and
+                Greptile, it posted zero false positives. Built in Rust, deployed as a
+                GitHub App behind the team's GitOps pipeline.
+              </p>
+              <span class="project__note">Internal — no public repository</span>
+            </div>
+          </li>
+
+          <li class="project reveal">
             <a class="project__link" href="https://github.com/spcmky/shipwright" rel="noopener" aria-labelledby="proj-shipwright">
               <span class="project__lang" data-lang="TypeScript">TypeScript</span>
               <h3 class="project__title" id="proj-shipwright">shipwright</h3>
@@ -274,17 +291,6 @@
             </a>
           </li>
 
-          <li class="project reveal">
-            <a class="project__link" href="https://github.com/spcmky/cat-feeder-5000" rel="noopener" aria-labelledby="proj-cat-feeder-5000">
-              <span class="project__lang" data-lang="Python">Python</span>
-              <h3 class="project__title" id="proj-cat-feeder-5000">cat-feeder-5000</h3>
-              <p class="project__body">
-                An automated pet feeder in Python. Physical hardware, real consequences,
-                and a very unforgiving set of end users.
-              </p>
-              <span class="project__cta">View repository<svg class="btn__arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 11.5 11.5 4.5M6 4.5h5.5V10"/></svg></span>
-            </a>
-          </li>
 
           <li class="project reveal">
             <a class="project__link" href="https://github.com/spcmky/codex" rel="noopener" aria-labelledby="proj-codex">
@@ -300,22 +306,9 @@
             </a>
           </li>
 
-          <li class="project reveal">
-            <a class="project__link" href="https://github.com/spcmky/cssr" rel="noopener" aria-labelledby="proj-cssr">
-              <span class="project__lang" data-lang="HTML">HTML</span>
-              <h3 class="project__title" id="proj-cssr">cssr</h3>
-              <p class="project__body">
-                An internal web app for recording student course scores — small, focused,
-                and built for the people who had to use it every day.
-              </p>
-              <span class="project__cta">View repository<svg class="btn__arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 11.5 11.5 4.5M6 4.5h5.5V10"/></svg></span>
-            </a>
-          </li>
 
           <!-- Empty cells that square off the last row. Seven projects leave one gap
                at two columns and two at three, so the second only shows at three. -->
-          <li class="project project--ghost" aria-hidden="true"></li>
-          <li class="project project--ghost project--ghost-3col" aria-hidden="true"></li>
         </ul>
       </div>
     </section>

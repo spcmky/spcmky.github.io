@@ -619,6 +619,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .project__lang[data-lang="Python"]::before { background: #f2c14e; }
 .project__lang[data-lang="Groovy"]::before { background: #4298b8; }
 .project__lang[data-lang="HTML"]::before { background: #e34c26; }
+.project__lang[data-lang="Rust"]::before { background: #dea584; }
 
 .project__title {
   font-family: var(--font-mono);
