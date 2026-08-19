@@ -122,7 +122,7 @@ body {
    it drift out of step with the section surfaces, which snap. */
 
 img, svg { display: block; max-width: 100%; }
-ul { list-style: none; padding: 0; }
+ul, ol { list-style: none; padding: 0; }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
 
@@ -833,4 +833,92 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   body { background: #fff; color: #000; }
   .section { padding-block: var(--space-8); }
   .reveal { opacity: 1; transform: none; }
+}
+
+/* ---------- Eras ---------------------------------------------------------
+   Four platform shifts, early to each. The rule runs behind the markers and
+   is the only thing implying sequence, so it must never wrap — below the
+   breakpoint the list becomes a plain stack and the rule is dropped. */
+
+.eras {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-8) var(--space-6);
+  margin-top: var(--space-16);
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--border);
+}
+
+.era { position: relative; }
+
+.era__year {
+  display: block;
+  color: var(--text-faint);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.era__name {
+  display: block;
+  margin-top: var(--space-2);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.era--now .era__name { color: var(--accent); }
+
+/* Five items in two columns leaves an orphan; the current era takes the width. */
+.eras > .era--now { grid-column: 1 / -1; }
+
+@media (min-width: 46rem) {
+  .eras { grid-template-columns: repeat(5, 1fr); }
+  .eras > .era--now { grid-column: auto; }
+
+  /* Marker + connecting rule, drawn only in the horizontal layout. */
+  .era { padding-top: var(--space-6); }
+
+  .era::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: var(--radius-full);
+    background: var(--border-strong);
+    transform: translateY(-50%);
+  }
+
+  .era::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0.5rem;
+    right: 0;
+    height: 1px;
+    background: var(--border);
+    transform: translateY(-50%);
+  }
+
+  .era:last-child::after { display: none; }
+
+  .era--now::before {
+    background: var(--accent);
+    box-shadow: 0 0 0 4px var(--accent-soft);
+  }
+}
+
+/* Second beat of the headline — larger than the lede, quieter than the title,
+   so it reads as part of the statement rather than the start of the prose. */
+.hero__tagline {
+  margin-top: var(--space-4);
+  color: var(--text-muted);
+  font-size: var(--text-2xl);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  text-wrap: balance;
 }
