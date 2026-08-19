@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.spcmky.net/sitemap.xml
+Sitemap: https://www.chrisedwards.dev/sitemap.xml
