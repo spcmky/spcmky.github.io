@@ -240,9 +240,9 @@
           </li>
 
           <li class="project reveal">
-            <div class="project__static">
+            <a class="project__link" href="https://github.com/spcmky/greybeard" rel="noopener" aria-labelledby="proj-greybeard">
               <span class="project__lang" data-lang="Rust">Rust</span>
-              <h3 class="project__title">greybeard</h3>
+              <h3 class="project__title" id="proj-greybeard">greybeard</h3>
               <p class="project__body">
                 An AI pull-request reviewer running in production against internal
                 repositories. Six specialist lenses review a change in parallel, every
@@ -252,8 +252,8 @@
                 Greptile, it posted zero false positives. Built in Rust, deployed as a
                 GitHub App behind the team's GitOps pipeline.
               </p>
-              <span class="project__note">Internal — no public repository</span>
-            </div>
+              <span class="project__cta">View repository<svg class="btn__arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 11.5 11.5 4.5M6 4.5h5.5V10"/></svg></span>
+            </a>
           </li>
 
           <li class="project reveal">
@@ -313,9 +313,6 @@
             </a>
           </li>
 
-
-          <!-- Empty cells that square off the last row. Seven projects leave one gap
-               at two columns and two at three, so the second only shows at three. -->
         </ul>
       </div>
     </section>
